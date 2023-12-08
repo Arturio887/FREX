@@ -13,19 +13,19 @@ with open(file_name, 'r', encoding='utf-8') as file:
 
     abzatss = file_content.split('\n\n')
 
-    word_count = 0
+    words = 0
 
     
     for abzats in abzatss:
         
         if word.lower() in abzats.lower():
             
-            word_count += abzats.lower().count(word.lower())
+            words += abzats.lower().count(word.lower())
             
             highlighted_word = abzats.replace(word, word.upper())
             print(highlighted_word)
             print('*' * 20)  
 
     
-    print(f"Знайдено {word_count} слова(слів)")
+    print(f"Знайдено {words} слова(слів)")
 
